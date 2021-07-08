@@ -16,6 +16,9 @@ class PlacesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = screen
+        presenter?.getPlaces(with: "Austin, Texas, USA") { places in
+            print(places)
+        }
     }
 }
 

@@ -1,0 +1,15 @@
+// Errors
+"url_creation_error" = "Couldn't create URL";
+"null_data_error" = "Response data is null";
+
+// Search Bar
+"search_bar_placeholder" = "Search";
+"cancel_button" = "Cancel";
+
+// Place List View
+"places_list_view_title" = "Find a place";
+"places_list_view_placeholder_text" = "Type something\non the search bar";
+"places_list_view_loading" = "Loading...";
+
+// Place Detail View
+"place_detail_view_title" = "Details";
