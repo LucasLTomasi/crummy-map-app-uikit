@@ -12,8 +12,8 @@ class PlacesListPresenter: PlacesListPresenterInput {
     }
 
     func getPlaces(with text: String, completion: @escaping (Result<[Place], APIError>) -> Void) {
-        apiClient.request(text: text) { response in
-            switch response {
+        apiClient.request(text: text) { result in
+            switch result {
             case let .success(apiResponse):
                 completion(.success(apiResponse.results))
             case let .failure(apiError):

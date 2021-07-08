@@ -3,6 +3,7 @@ import UIKit
 class PlacesListViewController: UIViewController {
     private let screen = PlacesListView()
     private let presenter: PlacesListPresenterInput?
+    private var places: [Place] = []
 
     init(presenter: PlacesListPresenterInput) {
         self.presenter = presenter
@@ -16,11 +17,41 @@ class PlacesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = screen
-        presenter?.getPlaces(with: "Austin, Texas, USA") { places in
-            print(places)
+        screen.tableView.delegate = self
+        screen.tableView.dataSource = self
+        presenter?.getPlaces(with: "Austin, Texas, USA") { result in
+            switch result {
+            case let .success(places):
+                self.places = places
+                DispatchQueue.main.async {
+                    self.screen.tableView.reloadData()
+                }
+            case let .failure(apiError):
+                print(apiError)
+            }
         }
     }
 }
 
 extension PlacesListViewController: PlacesListPresenterOutput {}
 
+extension PlacesListViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        places.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = screen.tableView.dequeueReusableCell(withIdentifier: String(describing: PlacesListTableViewCell.self))
+            as? PlacesListTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.label.text = places[indexPath.row].formatted
+        return cell
+    }
+}
+
+extension PlacesListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Selected at \(indexPath.row)")
+    }
+}

@@ -1,18 +1,19 @@
 import UIKit
 
 class PlacesListView: UIView {
-    private let label: UILabel = {
-        var label = UILabel()
-        label.text = "Hello!"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+    let tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.tableFooterView = UIView()
+        tableView.register(PlacesListTableViewCell.self, forCellReuseIdentifier: String(describing: PlacesListTableViewCell.self))
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
     }()
 
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         buildViewHierarchy()
         setupConstraints()
-        setupAdditionalConfiguration()
+        backgroundColor = .systemBackground
     }
 
     required init?(coder _: NSCoder) {
@@ -20,17 +21,15 @@ class PlacesListView: UIView {
     }
 
     private func buildViewHierarchy() {
-        addSubview(label)
+        addSubview(tableView)
     }
 
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            label.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-            label.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor)
+            tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])
-    }
-
-    private func setupAdditionalConfiguration() {
-        backgroundColor = .white
     }
 }

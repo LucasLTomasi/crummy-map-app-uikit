@@ -27,6 +27,7 @@
 		07B7926A269778F000CCEA3D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07B79269269778F000CCEA3D /* Localizable.strings */; };
 		07B792722697791700CCEA3D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B792712697791700CCEA3D /* String+Extensions.swift */; };
 		07B7927B2697793800CCEA3D /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B7927A2697793800CCEA3D /* Place.swift */; };
+		07B7929226978C7400CCEA3D /* PlacesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B7929126978C7400CCEA3D /* PlacesListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		07B79269269778F000CCEA3D /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		07B792712697791700CCEA3D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		07B7927A2697793800CCEA3D /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		07B7929126978C7400CCEA3D /* PlacesListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				07B7920626976B0200CCEA3D /* PlacesListPresenter.swift */,
 				07B7921026976B1700CCEA3D /* PlacesListView.swift */,
 				07B791BA2697682400CCEA3D /* PlacesListViewController.swift */,
+				07B7929126978C7400CCEA3D /* PlacesListTableViewCell.swift */,
 			);
 			path = PlacesList;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				07B7924C2697788200CCEA3D /* APIClientProtocol.swift in Sources */,
 				07B7920C26976B0C00CCEA3D /* PlacesListContract.swift in Sources */,
 				07B792462697785900CCEA3D /* APIClient.swift in Sources */,
+				07B7929226978C7400CCEA3D /* PlacesListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
