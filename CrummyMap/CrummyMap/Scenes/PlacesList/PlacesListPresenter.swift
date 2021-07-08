@@ -1,3 +1,5 @@
+import UIKit
+
 class PlacesListPresenter: PlacesListPresenterInput {
     private let apiClient = APIClient.shared
     private let coordinator: PlacesListCoordinator
@@ -20,5 +22,9 @@ class PlacesListPresenter: PlacesListPresenterInput {
                 completion(.failure(apiError))
             }
         }
+    }
+
+    func navigateToPlaceDetail(place: Place, navigationController: UINavigationController?) {
+        coordinator.pushPlaceDetail(place: place, navigationController: navigationController)
     }
 }

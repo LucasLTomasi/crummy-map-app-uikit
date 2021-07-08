@@ -17,8 +17,10 @@ class PlacesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = screen
+        title = String.Localizable.placesListViewTitle
         screen.tableView.delegate = self
         screen.tableView.dataSource = self
+
         presenter?.getPlaces(with: "Austin, Texas, USA") { result in
             switch result {
             case let .success(places):
@@ -45,13 +47,13 @@ extension PlacesListViewController: UITableViewDataSource {
             as? PlacesListTableViewCell else {
             return UITableViewCell()
         }
-        cell.label.text = places[indexPath.row].formatted
+        cell.formattedPlaceLabel.text = places[indexPath.row].formatted
         return cell
     }
 }
 
 extension PlacesListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected at \(indexPath.row)")
+        presenter?.navigateToPlaceDetail(place: places[indexPath.row], navigationController: navigationController)
     }
 }

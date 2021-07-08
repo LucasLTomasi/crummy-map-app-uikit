@@ -28,6 +28,9 @@
 		07B792722697791700CCEA3D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B792712697791700CCEA3D /* String+Extensions.swift */; };
 		07B7927B2697793800CCEA3D /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B7927A2697793800CCEA3D /* Place.swift */; };
 		07B7929226978C7400CCEA3D /* PlacesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B7929126978C7400CCEA3D /* PlacesListTableViewCell.swift */; };
+		07B7929F2697A11A00CCEA3D /* PlaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B7929E2697A11A00CCEA3D /* PlaceDetailView.swift */; };
+		07B792A42697A12600CCEA3D /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B792A32697A12600CCEA3D /* PlaceDetailViewController.swift */; };
+		07B792BB2697A6F900CCEA3D /* FormattedPlaceLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B792BA2697A6F900CCEA3D /* FormattedPlaceLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,9 @@
 		07B792712697791700CCEA3D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		07B7927A2697793800CCEA3D /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		07B7929126978C7400CCEA3D /* PlacesListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListTableViewCell.swift; sourceTree = "<group>"; };
+		07B7929E2697A11A00CCEA3D /* PlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailView.swift; sourceTree = "<group>"; };
+		07B792A32697A12600CCEA3D /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
+		07B792BA2697A6F900CCEA3D /* FormattedPlaceLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedPlaceLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				07B7923D2697780A00CCEA3D /* API */,
+				07B792B82697A6AC00CCEA3D /* Components */,
 				07B79268269778E400CCEA3D /* Extensions */,
 				07B792792697793100CCEA3D /* Models */,
 				07B791F826976A1500CCEA3D /* Navigation */,
@@ -178,6 +185,8 @@
 		07B791F12697697100CCEA3D /* PlaceDetail */ = {
 			isa = PBXGroup;
 			children = (
+				07B7929E2697A11A00CCEA3D /* PlaceDetailView.swift */,
+				07B792A32697A12600CCEA3D /* PlaceDetailViewController.swift */,
 			);
 			path = PlaceDetail;
 			sourceTree = "<group>";
@@ -237,6 +246,22 @@
 				07B7927A2697793800CCEA3D /* Place.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		07B792B82697A6AC00CCEA3D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				07B792B92697A6E700CCEA3D /* Labels */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		07B792B92697A6E700CCEA3D /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				07B792BA2697A6F900CCEA3D /* FormattedPlaceLabel.swift */,
+			);
+			path = Labels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,9 +403,12 @@
 				07B792542697789600CCEA3D /* APIResponse.swift in Sources */,
 				07B7921126976B1700CCEA3D /* PlacesListView.swift in Sources */,
 				07B792722697791700CCEA3D /* String+Extensions.swift in Sources */,
+				07B792A42697A12600CCEA3D /* PlaceDetailViewController.swift in Sources */,
+				07B792BB2697A6F900CCEA3D /* FormattedPlaceLabel.swift in Sources */,
 				07B7927B2697793800CCEA3D /* Place.swift in Sources */,
 				07B7921926976B9100CCEA3D /* PlacesListCoordinator.swift in Sources */,
 				07B79264269778D300CCEA3D /* APIDecoder.swift in Sources */,
+				07B7929F2697A11A00CCEA3D /* PlaceDetailView.swift in Sources */,
 				07B7924C2697788200CCEA3D /* APIClientProtocol.swift in Sources */,
 				07B7920C26976B0C00CCEA3D /* PlacesListContract.swift in Sources */,
 				07B792462697785900CCEA3D /* APIClient.swift in Sources */,
