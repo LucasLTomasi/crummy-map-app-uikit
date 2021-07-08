@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		07B791B72697682400CCEA3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B791B62697682400CCEA3D /* AppDelegate.swift */; };
-		07B791B92697682400CCEA3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B791B82697682400CCEA3D /* SceneDelegate.swift */; };
-		07B791BB2697682400CCEA3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B791BA2697682400CCEA3D /* ViewController.swift */; };
-		07B791BE2697682400CCEA3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07B791BC2697682400CCEA3D /* Main.storyboard */; };
+		07B791BB2697682400CCEA3D /* PlacesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B791BA2697682400CCEA3D /* PlacesListViewController.swift */; };
 		07B791C02697682600CCEA3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07B791BF2697682600CCEA3D /* Assets.xcassets */; };
 		07B791C32697682600CCEA3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07B791C12697682600CCEA3D /* LaunchScreen.storyboard */; };
 		07B791CE2697682700CCEA3D /* CrummyMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B791CD2697682700CCEA3D /* CrummyMapTests.swift */; };
 		07B791D92697682700CCEA3D /* CrummyMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B791D82697682700CCEA3D /* CrummyMapUITests.swift */; };
+		07B791FA26976A1F00CCEA3D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B791F926976A1F00CCEA3D /* Coordinator.swift */; };
+		07B7920226976A9500CCEA3D /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B7920126976A9500CCEA3D /* ViewControllerFactory.swift */; };
+		07B7920726976B0200CCEA3D /* PlacesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B7920626976B0200CCEA3D /* PlacesListPresenter.swift */; };
+		07B7920C26976B0C00CCEA3D /* PlacesListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B7920B26976B0C00CCEA3D /* PlacesListContract.swift */; };
+		07B7921126976B1700CCEA3D /* PlacesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B7921026976B1700CCEA3D /* PlacesListView.swift */; };
+		07B7921926976B9100CCEA3D /* PlacesListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B7921826976B9100CCEA3D /* PlacesListCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +41,7 @@
 /* Begin PBXFileReference section */
 		07B791B32697682400CCEA3D /* CrummyMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrummyMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B791B62697682400CCEA3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		07B791B82697682400CCEA3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		07B791BA2697682400CCEA3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		07B791BD2697682400CCEA3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		07B791BA2697682400CCEA3D /* PlacesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListViewController.swift; sourceTree = "<group>"; };
 		07B791BF2697682600CCEA3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07B791C22697682600CCEA3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07B791C42697682600CCEA3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +51,12 @@
 		07B791D42697682700CCEA3D /* CrummyMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrummyMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B791D82697682700CCEA3D /* CrummyMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrummyMapUITests.swift; sourceTree = "<group>"; };
 		07B791DA2697682700CCEA3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07B791F926976A1F00CCEA3D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		07B7920126976A9500CCEA3D /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		07B7920626976B0200CCEA3D /* PlacesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListPresenter.swift; sourceTree = "<group>"; };
+		07B7920B26976B0C00CCEA3D /* PlacesListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListContract.swift; sourceTree = "<group>"; };
+		07B7921026976B1700CCEA3D /* PlacesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListView.swift; sourceTree = "<group>"; };
+		07B7921826976B9100CCEA3D /* PlacesListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +107,12 @@
 		07B791B52697682400CCEA3D /* CrummyMap */ = {
 			isa = PBXGroup;
 			children = (
+				07B791F826976A1500CCEA3D /* Navigation */,
+				07B791C42697682600CCEA3D /* Info.plist */,
 				07B791B62697682400CCEA3D /* AppDelegate.swift */,
-				07B791B82697682400CCEA3D /* SceneDelegate.swift */,
-				07B791BA2697682400CCEA3D /* ViewController.swift */,
-				07B791BC2697682400CCEA3D /* Main.storyboard */,
 				07B791BF2697682600CCEA3D /* Assets.xcassets */,
 				07B791C12697682600CCEA3D /* LaunchScreen.storyboard */,
-				07B791C42697682600CCEA3D /* Info.plist */,
+				07B791ED2697695100CCEA3D /* Scenes */,
 			);
 			path = CrummyMap;
 			sourceTree = "<group>";
@@ -126,6 +133,43 @@
 				07B791DA2697682700CCEA3D /* Info.plist */,
 			);
 			path = CrummyMapUITests;
+			sourceTree = "<group>";
+		};
+		07B791ED2697695100CCEA3D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				07B791F12697697100CCEA3D /* PlaceDetail */,
+				07B791F02697696900CCEA3D /* PlacesList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		07B791F02697696900CCEA3D /* PlacesList */ = {
+			isa = PBXGroup;
+			children = (
+				07B7920B26976B0C00CCEA3D /* PlacesListContract.swift */,
+				07B7921826976B9100CCEA3D /* PlacesListCoordinator.swift */,
+				07B7920626976B0200CCEA3D /* PlacesListPresenter.swift */,
+				07B7921026976B1700CCEA3D /* PlacesListView.swift */,
+				07B791BA2697682400CCEA3D /* PlacesListViewController.swift */,
+			);
+			path = PlacesList;
+			sourceTree = "<group>";
+		};
+		07B791F12697697100CCEA3D /* PlaceDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PlaceDetail;
+			sourceTree = "<group>";
+		};
+		07B791F826976A1500CCEA3D /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				07B791F926976A1F00CCEA3D /* Coordinator.swift */,
+				07B7920126976A9500CCEA3D /* ViewControllerFactory.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +277,6 @@
 			files = (
 				07B791C32697682600CCEA3D /* LaunchScreen.storyboard in Resources */,
 				07B791C02697682600CCEA3D /* Assets.xcassets in Resources */,
-				07B791BE2697682400CCEA3D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +301,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07B791BB2697682400CCEA3D /* ViewController.swift in Sources */,
+				07B7920726976B0200CCEA3D /* PlacesListPresenter.swift in Sources */,
+				07B791FA26976A1F00CCEA3D /* Coordinator.swift in Sources */,
+				07B7920226976A9500CCEA3D /* ViewControllerFactory.swift in Sources */,
+				07B791BB2697682400CCEA3D /* PlacesListViewController.swift in Sources */,
 				07B791B72697682400CCEA3D /* AppDelegate.swift in Sources */,
-				07B791B92697682400CCEA3D /* SceneDelegate.swift in Sources */,
+				07B7921126976B1700CCEA3D /* PlacesListView.swift in Sources */,
+				07B7921926976B9100CCEA3D /* PlacesListCoordinator.swift in Sources */,
+				07B7920C26976B0C00CCEA3D /* PlacesListContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +344,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		07B791BC2697682400CCEA3D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				07B791BD2697682400CCEA3D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		07B791C12697682600CCEA3D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
