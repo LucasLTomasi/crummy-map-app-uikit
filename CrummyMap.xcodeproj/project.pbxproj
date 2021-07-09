@@ -284,8 +284,8 @@
 		07B791D72697682700CCEA3D /* CrummyMapUITests */ = {
 			isa = PBXGroup;
 			children = (
-				07B791D82697682700CCEA3D /* CrummyMapUITests.swift */,
 				07B791DA2697682700CCEA3D /* Info.plist */,
+				07B791D82697682700CCEA3D /* CrummyMapUITests.swift */,
 			);
 			path = CrummyMapUITests;
 			sourceTree = "<group>";
