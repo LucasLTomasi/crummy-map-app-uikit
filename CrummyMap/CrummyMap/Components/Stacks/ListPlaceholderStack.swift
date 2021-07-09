@@ -26,6 +26,7 @@ class ListPlaceholderStack: UIStackView {
         loadingIndicator.startAnimating()
         loadingIndicator.isHidden = true
         loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
+        loadingIndicator.color = .label
         addArrangedSubview(loadingIndicator)
         NSLayoutConstraint.activate([
             loadingIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),

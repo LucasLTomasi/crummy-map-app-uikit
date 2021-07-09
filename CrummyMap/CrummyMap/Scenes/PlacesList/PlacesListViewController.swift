@@ -22,6 +22,15 @@ class PlacesListViewController: UIViewController {
         screen.tableView.dataSource = self
         screen.searchBar.delegate = self
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if places.isEmpty {
+            screen.showIdlePlaceholder()
+        } else {
+            screen.showPlacesList()
+        }
+    }
 }
 
 extension PlacesListViewController: PlacesListPresenterOutput {}
@@ -43,6 +52,7 @@ extension PlacesListViewController: UITableViewDataSource {
 
 extension PlacesListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        screen.searchBar.resignFirstResponder()
         presenter?.navigateToPlaceDetail(place: places[indexPath.row], navigationController: navigationController)
     }
 }
@@ -54,7 +64,9 @@ extension PlacesListViewController: UISearchBarDelegate {
 
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
-        screen.showIdlePlaceholder()
+        if screen.searchBar.text?.isEmpty == true {
+            screen.showIdlePlaceholder()
+        }
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
@@ -73,7 +85,7 @@ extension PlacesListViewController: UISearchBarDelegate {
                 case let .success(places):
                     self.places = places
                     DispatchQueue.main.async {
-                        self.screen.showTableView()
+                        self.screen.showPlacesList()
                         self.screen.tableView.reloadData()
                     }
                 case .failure:

@@ -38,7 +38,7 @@ class PlacesListView: UIView {
         ])
     }
 
-    func showTableView() {
+    func showPlacesList() {
         placeholderStack.isHidden = true
         tableView.isHidden = false
     }
