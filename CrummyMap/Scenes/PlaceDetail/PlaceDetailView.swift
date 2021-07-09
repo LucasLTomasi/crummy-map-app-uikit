@@ -4,9 +4,15 @@ import UIKit
 class PlacesDetailView: UIView {
     private let contentSpacing: CGFloat = 8
 
-    var formattedPlaceLabel = MultilineLabel()
+    let formattedPlaceLabel: MultilineLabel = {
+        let formattedPlaceLabel = MultilineLabel()
+        formattedPlaceLabel.textAlignment = .center
+        formattedPlaceLabel.font = formattedPlaceLabel.font.withSize(24)
+        return formattedPlaceLabel
+    }()
+
     let mapView: MKMapView = {
-        var mapView = MKMapView()
+        let mapView = MKMapView()
         mapView.translatesAutoresizingMaskIntoConstraints = false
         return mapView
     }()
@@ -15,8 +21,6 @@ class PlacesDetailView: UIView {
         super.init(frame: frame)
         buildViewHierarchy()
         setupConstraints()
-        formattedPlaceLabel.textAlignment = .center
-        formattedPlaceLabel.font = formattedPlaceLabel.font.withSize(24)
         backgroundColor = .systemBackground
     }
 

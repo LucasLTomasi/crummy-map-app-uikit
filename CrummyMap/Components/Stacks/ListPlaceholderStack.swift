@@ -29,7 +29,7 @@ class ListPlaceholderStack: UIStackView {
         loadingIndicator.color = .label
         addArrangedSubview(loadingIndicator)
         NSLayoutConstraint.activate([
-            loadingIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
+            loadingIndicator.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
     }
 

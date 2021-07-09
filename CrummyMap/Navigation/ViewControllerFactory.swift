@@ -1,6 +1,3 @@
-import Foundation
-import UIKit
-
 enum ViewControllerFactory {
     static func makePlacesListViewController(coordinator: PlacesListCoordinator) -> PlacesListViewController {
         let presenter = PlacesListPresenter(coordinator: coordinator)

@@ -2,9 +2,9 @@ import UIKit
 
 class PlacesListView: UIView {
     let searchBar = SearchBar()
-    let networkConnectionBanner = ErrorBannerView()
-    let placeholderStack = ListPlaceholderStack(image: UIImage.arrowtriangleUpFill,
-                                                text: String.Localizable.placesListViewPlaceholderText)
+    private let networkConnectionBanner = ErrorBannerView()
+    private let placeholderStack = ListPlaceholderStack(image: UIImage.arrowtriangleUpFill,
+                                                        text: String.Localizable.placesListViewPlaceholderText)
     let tableView = TableView()
 
     override init(frame: CGRect = .zero) {
