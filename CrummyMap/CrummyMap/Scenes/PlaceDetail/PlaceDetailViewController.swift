@@ -25,7 +25,7 @@ class PlaceDetailViewController: UIViewController {
 
     private func setMapRegion(with location: CLLocationCoordinate2D) {
         screen.mapView.setRegion(MKCoordinateRegion(center: location,
-                                                    span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)), animated: true)
+                                                    span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)), animated: true)
     }
 
     private func addAnnotation(with location: CLLocationCoordinate2D) {

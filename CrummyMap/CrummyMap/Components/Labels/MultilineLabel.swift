@@ -1,12 +1,12 @@
 import UIKit
 
-class FormattedPlaceLabel: UILabel {
-    init(_ formattedName: String = "") {
+class MultilineLabel: UILabel {
+    init(_ text: String = "") {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         lineBreakMode = .byWordWrapping
         numberOfLines = 0
-        text = formattedName
+        self.text = text
     }
 
     required init?(coder: NSCoder) {

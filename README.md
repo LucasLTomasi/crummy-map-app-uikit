@@ -1,2 +1,2 @@
-# crummy-map-app-uikit
+# Crummy Map App - UIKit
 Alamo Drafthouse iOS Coding Challenge - UIKit

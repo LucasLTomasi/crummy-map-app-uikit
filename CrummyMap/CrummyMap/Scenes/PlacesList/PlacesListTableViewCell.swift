@@ -3,7 +3,7 @@ import UIKit
 class PlacesListTableViewCell: UITableViewCell {
     private let contentSpacing: CGFloat = 12
 
-    let formattedPlaceLabel = FormattedPlaceLabel()
+    let formattedPlaceLabel = MultilineLabel()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

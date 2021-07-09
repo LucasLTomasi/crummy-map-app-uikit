@@ -4,7 +4,7 @@ import UIKit
 class PlacesDetailView: UIView {
     private let contentSpacing: CGFloat = 8
 
-    var formattedPlaceLabel = FormattedPlaceLabel()
+    var formattedPlaceLabel = MultilineLabel()
     let mapView: MKMapView = {
         var mapView = MKMapView()
         mapView.translatesAutoresizingMaskIntoConstraints = false

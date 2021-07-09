@@ -21,18 +21,6 @@ class PlacesListViewController: UIViewController {
         screen.tableView.delegate = self
         screen.tableView.dataSource = self
         screen.searchBar.delegate = self
-
-        presenter?.getPlaces(with: "Austin, Texas, USA") { result in
-            switch result {
-            case let .success(places):
-                self.places = places
-                DispatchQueue.main.async {
-                    self.screen.tableView.reloadData()
-                }
-            case let .failure(apiError):
-                print(apiError)
-            }
-        }
     }
 }
 
@@ -66,6 +54,7 @@ extension PlacesListViewController: UISearchBarDelegate {
 
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
+        screen.showIdlePlaceholder()
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
@@ -75,6 +64,24 @@ extension PlacesListViewController: UISearchBarDelegate {
     }
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
+        if searchText.isEmpty {
+            screen.showIdlePlaceholder()
+        } else {
+            screen.showLoadingPlaceholder()
+            presenter?.getPlaces(with: searchText) { result in
+                switch result {
+                case let .success(places):
+                    self.places = places
+                    DispatchQueue.main.async {
+                        self.screen.showTableView()
+                        self.screen.tableView.reloadData()
+                    }
+                case .failure:
+                    DispatchQueue.main.async {
+                        self.screen.showError()
+                    }
+                }
+            }
+        }
     }
 }
