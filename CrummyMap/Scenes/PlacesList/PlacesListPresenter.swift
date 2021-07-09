@@ -1,13 +1,15 @@
 import UIKit
 
 class PlacesListPresenter: PlacesListPresenterInput {
-    private let apiClient = APIClient.shared
+    private let debounceTime: Double = 1
+    private let apiClient: APIClientProtocol
     private let coordinator: PlacesListCoordinator
     private weak var output: PlacesListPresenterOutput?
     private var getPlacesTask: DispatchWorkItem?
 
-    init(coordinator: PlacesListCoordinator) {
+    init(coordinator: PlacesListCoordinator, apiClient: APIClientProtocol = APIClient.shared) {
         self.coordinator = coordinator
+        self.apiClient = apiClient
         observeNetworkConnectionAvailability()
     }
 
@@ -30,7 +32,7 @@ class PlacesListPresenter: PlacesListPresenterInput {
             }
         }
         guard let getPlacesTask = getPlacesTask else { return }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: getPlacesTask)
+        DispatchQueue.main.asyncAfter(deadline: .now() + debounceTime, execute: getPlacesTask)
     }
 
     func navigateToPlaceDetail(place: Place, navigationController: UINavigationController?) {

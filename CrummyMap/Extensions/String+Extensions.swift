@@ -5,6 +5,7 @@ extension String {
         // Errors
         static let urlCreationError = NSLocalizedString("url_creation_error", comment: "")
         static let nullDataError = NSLocalizedString("null_data_error", comment: "")
+        static let decodingError = NSLocalizedString("decoding_error", comment: "")
         static let genericApiError = NSLocalizedString("generic_api_error", comment: "")
         static let noInternetConnection = NSLocalizedString("no_internet_connection", comment: "")
 

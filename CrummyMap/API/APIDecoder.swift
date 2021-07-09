@@ -13,8 +13,7 @@ enum APIDecoder {
             let response = try decoder.decode(APIResponse.self, from: data)
             completion(.success(response))
         } catch {
-            let jsonResponse = String(decoding: data, as: UTF8.self)
-            completion(.failure(.decoding(description: jsonResponse)))
+            completion(.failure(.decoding(description: String.Localizable.decodingError)))
         }
     }
 }

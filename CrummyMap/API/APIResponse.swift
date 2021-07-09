@@ -1,3 +1,3 @@
-struct APIResponse: Decodable {
+struct APIResponse: Decodable, Equatable {
     var results: [Place]
 }

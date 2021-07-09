@@ -9,12 +9,19 @@
 /* Begin PBXBuildFile section */
 		077534422698492A001E0D73 /* NetworkConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077534412698492A001E0D73 /* NetworkConnectionManager.swift */; };
 		0775344B26984C58001E0D73 /* ErrorBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0775344A26984C58001E0D73 /* ErrorBannerView.swift */; };
+		07753454269851E1001E0D73 /* APIDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07753453269851E1001E0D73 /* APIDecoderTests.swift */; };
+		07753472269858FC001E0D73 /* PlaceDetailViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07753471269858FC001E0D73 /* PlaceDetailViewControllerTest.swift */; };
+		0775348726985F86001E0D73 /* CoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0775348626985F86001E0D73 /* CoordinatorMock.swift */; };
+		0775348F269860D1001E0D73 /* PlacesListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0775348E269860D1001E0D73 /* PlacesListPresenterTests.swift */; };
+		07753499269861FA001E0D73 /* APIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07753498269861FA001E0D73 /* APIClientMock.swift */; };
+		077534A6269862B2001E0D73 /* PlaceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077534A5269862B2001E0D73 /* PlaceFactory.swift */; };
+		077534B426987C0A001E0D73 /* PlacesListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077534B326987C0A001E0D73 /* PlacesListViewControllerTests.swift */; };
+		077534BD26987CDA001E0D73 /* PlacesListPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077534BC26987CDA001E0D73 /* PlacesListPresenterMock.swift */; };
 		078062962697D03A00F55076 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078062952697D03A00F55076 /* UIImage+Extensions.swift */; };
 		07B791B72697682400CCEA3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B791B62697682400CCEA3D /* AppDelegate.swift */; };
 		07B791BB2697682400CCEA3D /* PlacesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B791BA2697682400CCEA3D /* PlacesListViewController.swift */; };
 		07B791C02697682600CCEA3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07B791BF2697682600CCEA3D /* Assets.xcassets */; };
 		07B791C32697682600CCEA3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07B791C12697682600CCEA3D /* LaunchScreen.storyboard */; };
-		07B791CE2697682700CCEA3D /* CrummyMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B791CD2697682700CCEA3D /* CrummyMapTests.swift */; };
 		07B791D92697682700CCEA3D /* CrummyMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B791D82697682700CCEA3D /* CrummyMapUITests.swift */; };
 		07B791FA26976A1F00CCEA3D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B791F926976A1F00CCEA3D /* Coordinator.swift */; };
 		07B7920226976A9500CCEA3D /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B7920126976A9500CCEA3D /* ViewControllerFactory.swift */; };
@@ -59,6 +66,14 @@
 /* Begin PBXFileReference section */
 		077534412698492A001E0D73 /* NetworkConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectionManager.swift; sourceTree = "<group>"; };
 		0775344A26984C58001E0D73 /* ErrorBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBannerView.swift; sourceTree = "<group>"; };
+		07753453269851E1001E0D73 /* APIDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDecoderTests.swift; sourceTree = "<group>"; };
+		07753471269858FC001E0D73 /* PlaceDetailViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewControllerTest.swift; sourceTree = "<group>"; };
+		0775348626985F86001E0D73 /* CoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorMock.swift; sourceTree = "<group>"; };
+		0775348E269860D1001E0D73 /* PlacesListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListPresenterTests.swift; sourceTree = "<group>"; };
+		07753498269861FA001E0D73 /* APIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientMock.swift; sourceTree = "<group>"; };
+		077534A5269862B2001E0D73 /* PlaceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFactory.swift; sourceTree = "<group>"; };
+		077534B326987C0A001E0D73 /* PlacesListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListViewControllerTests.swift; sourceTree = "<group>"; };
+		077534BC26987CDA001E0D73 /* PlacesListPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListPresenterMock.swift; sourceTree = "<group>"; };
 		078062952697D03A00F55076 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		07B791B32697682400CCEA3D /* CrummyMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrummyMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B791B62697682400CCEA3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,7 +82,6 @@
 		07B791C22697682600CCEA3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07B791C42697682600CCEA3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07B791C92697682600CCEA3D /* CrummyMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrummyMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		07B791CD2697682700CCEA3D /* CrummyMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrummyMapTests.swift; sourceTree = "<group>"; };
 		07B791CF2697682700CCEA3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07B791D42697682700CCEA3D /* CrummyMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrummyMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B791D82697682700CCEA3D /* CrummyMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrummyMapUITests.swift; sourceTree = "<group>"; };
@@ -136,6 +150,90 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		07753452269851D3001E0D73 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				07753453269851E1001E0D73 /* APIDecoderTests.swift */,
+				07753496269861E6001E0D73 /* Mocks */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		0775346F269858CC001E0D73 /* PlaceDetail */ = {
+			isa = PBXGroup;
+			children = (
+				07753471269858FC001E0D73 /* PlaceDetailViewControllerTest.swift */,
+			);
+			path = PlaceDetail;
+			sourceTree = "<group>";
+		};
+		07753470269858D8001E0D73 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0775346F269858CC001E0D73 /* PlaceDetail */,
+				0775347926985D31001E0D73 /* PlacesList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		0775347926985D31001E0D73 /* PlacesList */ = {
+			isa = PBXGroup;
+			children = (
+				0775348E269860D1001E0D73 /* PlacesListPresenterTests.swift */,
+				077534B326987C0A001E0D73 /* PlacesListViewControllerTests.swift */,
+				077534BB26987CCF001E0D73 /* Mocks */,
+			);
+			path = PlacesList;
+			sourceTree = "<group>";
+		};
+		0775347A26985D44001E0D73 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				07753497269861EC001E0D73 /* Mocks */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		07753496269861E6001E0D73 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				07753498269861FA001E0D73 /* APIClientMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		07753497269861EC001E0D73 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				0775348626985F86001E0D73 /* CoordinatorMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		077534A32698629C001E0D73 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				077534A4269862A2001E0D73 /* Factories */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		077534A4269862A2001E0D73 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				077534A5269862B2001E0D73 /* PlaceFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		077534BB26987CCF001E0D73 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				077534BC26987CDA001E0D73 /* PlacesListPresenterMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		07B791AA2697682400CCEA3D = {
 			isa = PBXGroup;
 			children = (
@@ -174,8 +272,11 @@
 		07B791CC2697682700CCEA3D /* CrummyMapTests */ = {
 			isa = PBXGroup;
 			children = (
-				07B791CD2697682700CCEA3D /* CrummyMapTests.swift */,
 				07B791CF2697682700CCEA3D /* Info.plist */,
+				07753452269851D3001E0D73 /* API */,
+				077534A32698629C001E0D73 /* Models */,
+				0775347A26985D44001E0D73 /* Navigation */,
+				07753470269858D8001E0D73 /* Scenes */,
 			);
 			path = CrummyMapTests;
 			sourceTree = "<group>";
@@ -484,7 +585,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07B791CE2697682700CCEA3D /* CrummyMapTests.swift in Sources */,
+				07753499269861FA001E0D73 /* APIClientMock.swift in Sources */,
+				077534BD26987CDA001E0D73 /* PlacesListPresenterMock.swift in Sources */,
+				077534A6269862B2001E0D73 /* PlaceFactory.swift in Sources */,
+				0775348726985F86001E0D73 /* CoordinatorMock.swift in Sources */,
+				07753472269858FC001E0D73 /* PlaceDetailViewControllerTest.swift in Sources */,
+				0775348F269860D1001E0D73 /* PlacesListPresenterTests.swift in Sources */,
+				07753454269851E1001E0D73 /* APIDecoderTests.swift in Sources */,
+				077534B426987C0A001E0D73 /* PlacesListViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

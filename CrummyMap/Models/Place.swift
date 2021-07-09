@@ -1,9 +1,9 @@
-struct Place: Decodable, Hashable {
+struct Place: Decodable, Equatable {
     var formatted: String
     var geometry: Geometry
 }
 
-struct Geometry: Decodable, Hashable {
+struct Geometry: Decodable, Equatable {
     var latitude: Double
     var longitude: Double
 

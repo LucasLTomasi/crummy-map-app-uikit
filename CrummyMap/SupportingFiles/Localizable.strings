@@ -1,6 +1,7 @@
 // Errors
 "url_creation_error" = "Couldn't create URL";
 "null_data_error" = "Response data is null";
+"decoding_error" = "Error decoding payload";
 "generic_api_error" = "Something bad happened\nPlease try again";
 "no_internet_connection" = "No internet connection!";
 
