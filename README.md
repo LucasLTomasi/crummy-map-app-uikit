@@ -1,6 +1,20 @@
 # Crummy Map App - UIKit
 Alamo Drafthouse iOS Coding Challenge
 
+## Notes:
+- Instead of using Storyboard I've created views programmatically since:
+  - It's much easier to test this way.
+  - On a large meaningful project working with multiple team members it gets harder to manage storyboard (longer load times, hard to fix conflict in git, etc.).
+  - Storyboards errors happen at runtime, not at compile time.
+  - Storyboard works well when the user-interface is pre-determined and fixed.
+
+- Avoided using external libraries:
+  - Usually I would use libraries to make testing easy (Quick, Nimble, etc.) but I have avoided since it was explicitly mentioned to avoid external libs.
+  - For cleaner code and testing I've created extensions for String and Image (In the past I have had used RSwift).
+
+- UI Testing:
+  - When running on the simulator make sure that the keyboard is displayed by unchecking the `I/O -> Keyboard -> Connect Hardware Keyboard` so the tests work properly. 
+
 ## Project Structure:
 - <ins>__CrummyApp__</ins>: app root
   - <ins>__API__</ins>: *handles all API logic*
