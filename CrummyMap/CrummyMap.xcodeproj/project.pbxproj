@@ -31,6 +31,8 @@
 		07B7929F2697A11A00CCEA3D /* PlaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B7929E2697A11A00CCEA3D /* PlaceDetailView.swift */; };
 		07B792A42697A12600CCEA3D /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B792A32697A12600CCEA3D /* PlaceDetailViewController.swift */; };
 		07B792BB2697A6F900CCEA3D /* FormattedPlaceLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B792BA2697A6F900CCEA3D /* FormattedPlaceLabel.swift */; };
+		07B792CE2697CA3300CCEA3D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B792CD2697CA3300CCEA3D /* SearchBar.swift */; };
+		07B792D72697CAA700CCEA3D /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B792D62697CAA700CCEA3D /* TableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		07B7929E2697A11A00CCEA3D /* PlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailView.swift; sourceTree = "<group>"; };
 		07B792A32697A12600CCEA3D /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
 		07B792BA2697A6F900CCEA3D /* FormattedPlaceLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedPlaceLabel.swift; sourceTree = "<group>"; };
+		07B792CD2697CA3300CCEA3D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		07B792D62697CAA700CCEA3D /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +256,8 @@
 			isa = PBXGroup;
 			children = (
 				07B792B92697A6E700CCEA3D /* Labels */,
+				07B792DB2697CBF100CCEA3D /* SearchBars */,
+				07B792DC2697CBF700CCEA3D /* TableViews */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -262,6 +268,22 @@
 				07B792BA2697A6F900CCEA3D /* FormattedPlaceLabel.swift */,
 			);
 			path = Labels;
+			sourceTree = "<group>";
+		};
+		07B792DB2697CBF100CCEA3D /* SearchBars */ = {
+			isa = PBXGroup;
+			children = (
+				07B792CD2697CA3300CCEA3D /* SearchBar.swift */,
+			);
+			path = SearchBars;
+			sourceTree = "<group>";
+		};
+		07B792DC2697CBF700CCEA3D /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+				07B792D62697CAA700CCEA3D /* TableView.swift */,
+			);
+			path = TableViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,6 +426,7 @@
 				07B7921126976B1700CCEA3D /* PlacesListView.swift in Sources */,
 				07B792722697791700CCEA3D /* String+Extensions.swift in Sources */,
 				07B792A42697A12600CCEA3D /* PlaceDetailViewController.swift in Sources */,
+				07B792D72697CAA700CCEA3D /* TableView.swift in Sources */,
 				07B792BB2697A6F900CCEA3D /* FormattedPlaceLabel.swift in Sources */,
 				07B7927B2697793800CCEA3D /* Place.swift in Sources */,
 				07B7921926976B9100CCEA3D /* PlacesListCoordinator.swift in Sources */,
@@ -411,6 +434,7 @@
 				07B7929F2697A11A00CCEA3D /* PlaceDetailView.swift in Sources */,
 				07B7924C2697788200CCEA3D /* APIClientProtocol.swift in Sources */,
 				07B7920C26976B0C00CCEA3D /* PlacesListContract.swift in Sources */,
+				07B792CE2697CA3300CCEA3D /* SearchBar.swift in Sources */,
 				07B792462697785900CCEA3D /* APIClient.swift in Sources */,
 				07B7929226978C7400CCEA3D /* PlacesListTableViewCell.swift in Sources */,
 			);

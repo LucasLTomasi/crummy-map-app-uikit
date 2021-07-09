@@ -20,6 +20,7 @@ class PlacesListViewController: UIViewController {
         title = String.Localizable.placesListViewTitle
         screen.tableView.delegate = self
         screen.tableView.dataSource = self
+        screen.searchBar.delegate = self
 
         presenter?.getPlaces(with: "Austin, Texas, USA") { result in
             switch result {
@@ -55,5 +56,25 @@ extension PlacesListViewController: UITableViewDataSource {
 extension PlacesListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter?.navigateToPlaceDetail(place: places[indexPath.row], navigationController: navigationController)
+    }
+}
+
+extension PlacesListViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+    }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
     }
 }
