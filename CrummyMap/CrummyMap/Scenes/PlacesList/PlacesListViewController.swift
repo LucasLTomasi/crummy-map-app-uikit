@@ -78,6 +78,8 @@ extension PlacesListViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {
             screen.showIdlePlaceholder()
+        } else if searchText.count == 1 {
+            screen.showError(text: String.Localizable.placesListViewTypeMoreCharactersWarning)
         } else {
             screen.showLoadingPlaceholder()
             presenter?.getPlaces(with: searchText) { result in
@@ -85,12 +87,16 @@ extension PlacesListViewController: UISearchBarDelegate {
                 case let .success(places):
                     self.places = places
                     DispatchQueue.main.async {
-                        self.screen.showPlacesList()
-                        self.screen.tableView.reloadData()
+                        if places.isEmpty {
+                            self.screen.showError(text: String.Localizable.placesListViewNoResultsWarning)
+                        } else  {
+                            self.screen.showPlacesList()
+                            self.screen.tableView.reloadData()
+                        }
                     }
                 case .failure:
                     DispatchQueue.main.async {
-                        self.screen.showError()
+                        self.screen.showError(text: String.Localizable.genericApiError)
                     }
                 }
             }

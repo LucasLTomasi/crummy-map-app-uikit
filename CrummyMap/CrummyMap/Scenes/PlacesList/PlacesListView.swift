@@ -59,9 +59,9 @@ class PlacesListView: UIView {
         placeholderStack.isHidden = false
     }
 
-    func showError() {
+    func showError(text: String) {
         tableView.isHidden = true
-        placeholderStack.label?.text = String.Localizable.genericApiError
+        placeholderStack.label?.text = text
         placeholderStack.imageView?.isHidden = true
         placeholderStack.loadingIndicator.isHidden = true
         placeholderStack.isHidden = false
