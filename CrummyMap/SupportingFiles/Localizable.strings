@@ -2,6 +2,7 @@
 "url_creation_error" = "Couldn't create URL";
 "null_data_error" = "Response data is null";
 "generic_api_error" = "Something bad happened\nPlease try again";
+"no_internet_connection" = "No internet connection!";
 
 // Search Bar
 "search_bar_placeholder" = "Search";

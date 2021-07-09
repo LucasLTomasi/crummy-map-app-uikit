@@ -2,6 +2,7 @@ import UIKit
 
 class PlacesListView: UIView {
     let searchBar = SearchBar()
+    let networkConnectionBanner = ErrorBannerView()
     let placeholderStack = ListPlaceholderStack(image: UIImage.arrowtriangleUpFill,
                                                 text: String.Localizable.placesListViewPlaceholderText)
     let tableView = TableView()
@@ -22,14 +23,21 @@ class PlacesListView: UIView {
         addSubview(searchBar)
         addSubview(tableView)
         addSubview(placeholderStack)
+        addSubview(networkConnectionBanner)
     }
 
     private func setupConstraints() {
+        networkConnectionBanner.bannerHeight = networkConnectionBanner.heightAnchor.constraint(equalToConstant: 0)
+        networkConnectionBanner.bannerHeight?.isActive = true
         NSLayoutConstraint.activate([
             searchBar.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             searchBar.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
             searchBar.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            searchBar.bottomAnchor.constraint(equalTo: tableView.topAnchor),
+            searchBar.bottomAnchor.constraint(equalTo: networkConnectionBanner.topAnchor),
+            networkConnectionBanner.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            networkConnectionBanner.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            networkConnectionBanner.topAnchor.constraint(equalTo: searchBar.bottomAnchor),
+            networkConnectionBanner.bottomAnchor.constraint(equalTo: tableView.topAnchor),
             placeholderStack.centerYAnchor.constraint(equalTo: centerYAnchor),
             placeholderStack.centerXAnchor.constraint(equalTo: centerXAnchor),
             tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
@@ -65,5 +73,11 @@ class PlacesListView: UIView {
         placeholderStack.imageView?.isHidden = true
         placeholderStack.loadingIndicator.isHidden = true
         placeholderStack.isHidden = false
+    }
+
+    func updateNetworkConnectionErrorVisibility(shouldHide: Bool) {
+        networkConnectionBanner.update(shouldHide: shouldHide) {
+            self.layoutIfNeeded()
+        }
     }
 }

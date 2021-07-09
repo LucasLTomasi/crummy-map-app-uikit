@@ -8,6 +8,7 @@ class PlacesListPresenter: PlacesListPresenterInput {
 
     init(coordinator: PlacesListCoordinator) {
         self.coordinator = coordinator
+        observeNetworkConnectionAvailability()
     }
 
     func attach(output: PlacesListPresenterOutput) {
@@ -34,5 +35,11 @@ class PlacesListPresenter: PlacesListPresenterInput {
 
     func navigateToPlaceDetail(place: Place, navigationController: UINavigationController?) {
         coordinator.pushPlaceDetail(place: place, navigationController: navigationController)
+    }
+
+    private func observeNetworkConnectionAvailability() {
+        NetworkConnectionManager.shared.observe { availability in
+            self.output?.updateNetworkConnectionAvailability(availability)
+        }
     }
 }

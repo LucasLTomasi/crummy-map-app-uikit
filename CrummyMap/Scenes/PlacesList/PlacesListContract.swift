@@ -5,4 +5,6 @@ protocol PlacesListPresenterInput {
     func navigateToPlaceDetail(place: Place, navigationController: UINavigationController?)
 }
 
-protocol PlacesListPresenterOutput: AnyObject {}
+protocol PlacesListPresenterOutput: AnyObject {
+    func updateNetworkConnectionAvailability(_ availability: NetworkConnectionAvailability)
+}

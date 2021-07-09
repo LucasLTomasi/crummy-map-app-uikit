@@ -33,7 +33,11 @@ class PlacesListViewController: UIViewController {
     }
 }
 
-extension PlacesListViewController: PlacesListPresenterOutput {}
+extension PlacesListViewController: PlacesListPresenterOutput {
+    func updateNetworkConnectionAvailability(_ availability: NetworkConnectionAvailability) {
+        screen.updateNetworkConnectionErrorVisibility(shouldHide: availability == .available)
+    }
+}
 
 extension PlacesListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -89,7 +93,7 @@ extension PlacesListViewController: UISearchBarDelegate {
                     DispatchQueue.main.async {
                         if places.isEmpty {
                             self.screen.showError(text: String.Localizable.placesListViewNoResultsWarning)
-                        } else  {
+                        } else {
                             self.screen.showPlacesList()
                             self.screen.tableView.reloadData()
                         }
